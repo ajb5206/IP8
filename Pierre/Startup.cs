@@ -35,7 +35,7 @@ namespace PierreTracker
 			app.Run(async (context) =>
 			{
 				await context.Response.WriteAsync("Welcome to Pierre's!");
-			}):
+			});
 		}
 	}
 }
