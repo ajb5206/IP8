@@ -2,9 +2,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PierreTracker.Controllers
 {
-	public class HomeController : Controllers
+	public class HomeController : Controller
 	{
-		public string Welcome() { return "Welcome To Pierre's!"}
-		
+		[Route("/ordertracker")]
+		public string OrderTracker() { return "Look at orders here!";}
+
+		[Route("/")]
+		public string Welcome() { return "Welcome To Pierre's!";}
+
 	}
 }
