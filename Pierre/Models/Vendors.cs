@@ -2,7 +2,7 @@ namespace PierreTracker.Models
 {
 	public class Vendor
 	{
-		public string Vendors { get; set; }
+		public string VendorName { get; set; }
 		
 	}
 }
