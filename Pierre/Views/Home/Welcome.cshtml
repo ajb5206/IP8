@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset='utf-8'>
 		<title>Welcome to Pierre's</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 	</head>
 	<body>
 
 		<h1>Orders Here!</h1>
-		<p>The following orders:</p>
+		<h5>Input orders:</h5>
+
+		<form action="/ordertracker" method="post">
+			<label for="product">Product name</label>
+			<input id="product" name="product" type="text">
+			<label for="productDescription">Product Description</label>
+			<input id="productDescrption" name="productDescription" type="text">
+			<label for="price">Price</label>
+			<input id="price" name="price" type ="number">
+			<label for="date">Date Purchased</label>
+			<input id="date" name="date" type="string">
+			<button type="submit">Submit Order</button>
+		</form>
 		
 	</body>
 </html>
