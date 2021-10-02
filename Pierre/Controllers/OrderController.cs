@@ -9,7 +9,8 @@ namespace PierreTracker.Controllers
 		[HttpGet("/vendors/{vendorId}/orders/new")]
 		public ActionResult New(int vendorId) 
 		{
-			
+			Vender vendor = Vendor.Find(vendorId);
+			return View(vendor);
 		}
 		[HttpGet("/vendors/{vendorId}/orders/{orderId}")]
 		public ActionResult Show(int vendorId, int orderId)
