@@ -18,5 +18,10 @@ namespace PierreTracker.Models
 			Id = _instances.Count;
 			Items = new List<Order>{};
 		}
+
+		public static List<Vendor> GetAll()
+		{
+			return _instances;
+		}
 	}
 }
