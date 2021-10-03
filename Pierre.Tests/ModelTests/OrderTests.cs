@@ -10,13 +10,13 @@ namespace PierreTracker.Tests
 	{
 		public void Dispose()
 		{
-			Item.ClearAll();
+			Order.ClearAll();
 		}
 
 		[TestMethod]
 		public void OrderConstructor_CreatesInstanceOfOrder_Order()
 		{
-			Order newOrder = new Order("test", 0);
+			Order newOrder = new Order("test", "test", 0, "test");
 			Assert.AreEqual(typeof(Order), newOrder.GetType());
 		}
 	}

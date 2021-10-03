@@ -1,11 +1,11 @@
 @using PierreTracker.Models;
 
-<h3>Here all all of the orders for this vendor:</h3>
-<p>@Model["vendor"].Description</p>
+<h3>Here all all of the orders for @Model["vendor"].VendorName</h3>
+<p>Vendor description: @Model["vendor"].Description</p>
 <ol>
 	@foreach (Order order in @Model["orders"])
 	{
-		<li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'></a><p>$@order.Price</p></li>
+		<li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'></a><p>@order.Product, @order.ProductDescription, $@order.Price, date:@order.Date</p></li>
 	}
 </ol>
 

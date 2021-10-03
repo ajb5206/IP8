@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace PierreTracker.Controllers
 {
-	public class OrderController : Controller
+	public class OrdersController : Controller
 	
 	{
 		[HttpGet("/vendors/{vendorId}/orders/new")]
