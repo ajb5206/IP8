@@ -5,7 +5,7 @@ using PierreTracker.Models;
 
 namespace PierreTracker.Controllers
 {
-	public class VendorController : Controller
+	public class VendorsController : Controller
 	{
 		[HttpGet("/vendors")]
 		public ActionResult Index()
