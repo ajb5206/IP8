@@ -149,5 +149,17 @@ namespace PierreTracker.Tests
 			List<Order> result = Order.GetAll();
 			CollectionAssert.AreEqual(newOrder, result);
 		}
+
+		[TestMethod]
+		public void GetId_OrdersInstantiatedWithanIdandGetterReturns_Int()
+		{
+			string product = "bread";
+			string productDescription = "is tasty";
+			int price = 1;
+			string date = "today";
+			Order newOrder = new Order(product, productDescription, price, date);
+			int result = newOrder.Id;
+			Assert.AreEqual(1, result);
+		}
 	}
 }
