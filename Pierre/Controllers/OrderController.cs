@@ -10,14 +10,14 @@ namespace PierreTracker.Controllers
 		[HttpGet("/vendors/{vendorId}/orders/new")]
 		public ActionResult New(int vendorId) 
 		{
-			Vender vendor = Vendor.Find(vendorId);
+			Vendor vendor = Vendor.Find(vendorId);
 			return View(vendor);
 		}
 
 		[HttpGet("/vendors/{vendorId}/orders/{orderId}")]
 		public ActionResult Show(int vendorId, int orderId)
 		{ 
-			Order newOrder = Order.Find(orderId);
+			Order order = Order.Find(orderId);
 			Vendor vendor = Vendor.Find(vendorId);
 			Dictionary<string, object> model = new Dictionary<string, object>();
 			model.Add("order", order);
