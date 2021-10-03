@@ -56,5 +56,16 @@ namespace PierreTracker.Tests
 			Assert.AreEqual(price, result);
 		}
 
+		[TestMethod]
+		public void GetDate_ReturnsDate_String()
+		{
+			string product = "bread";
+			string productDescription ="The bread is tasty here.";
+			int price = 1;
+			string date = "today";
+			Order newOrder = new Order(product, productDescription, price, date);
+			string result = newOrder.Date;
+			Assert.AreEqual(date, result);
+		}
 	}
 }
