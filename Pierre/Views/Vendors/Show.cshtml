@@ -5,15 +5,12 @@
 <ol>
 	@foreach (Order order in @Model["orders"])
 	{
-		<li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'></a><p>Product: @order.Product, description: @order.ProductDescription, $@order.Price, date: @order.Date</p></li>
+		<li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>Info:</a><p>Product: @order.Product, $@order.Price</p></li>
 	}
 </ol>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add an new order to @Model["vendor"].VendorName's account!</a></p>
 
-<form action="/orders/delete" method="post">
-	<button type="submit" name="button">Delete all orders</button>
-</form>
 
 <p><a href='/vendors'>Return to the vendor list</a></p>
 
