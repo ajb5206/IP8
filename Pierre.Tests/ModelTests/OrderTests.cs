@@ -131,5 +131,23 @@ namespace PierreTracker.Tests
 			List<Order> result = Order.GetAll();
 			CollectionAssert.AreEqual(newOrderList, result);
 		}
+
+		[TestMethod]
+		public void GetAll_ReturnsOrder_OrderList()
+		{
+			string product01 = "bread";
+			string productDescription01 = "bread tasty";
+			int price01 = 1;
+			string date01 = "today";
+			string product02 = "pastries";
+			string productDescription02 = "pastries tasty";
+			int price02 = 2;
+			string date02 = "tomorrow";
+			Order newOrder1 = new Order(product01, productDescription01, price01, date01);
+			Order newOrder2 = new Order(product02, productDescription02, price02, date02);
+			List<Order> newOrder = new List<Order> { newOrder1, newOrder2 };
+			List<Order> result = Order.GetAll();
+			CollectionAssert.AreEqual(newOrder, result);
+		}
 	}
 }
