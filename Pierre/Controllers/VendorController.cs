@@ -50,5 +50,12 @@ namespace PierreTracker.Controllers
 			model.Add("vendor", foundVendor);
 			return View("Show", model);
 		}
+
+		[HttpPost("/vendors/delete")]
+		public ActionResult DeleteAll()
+		{
+			Vendor.ClearAll();
+			return View();
+		}
 	}
 }

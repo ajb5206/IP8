@@ -10,5 +10,11 @@
 </ol>
 
 <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add an new order to @Model["vendor"].VendorName's account!</a></p>
+
+<form action="/orders/delete" method="post">
+	<button type="submit" name="button">Delete all orders</button>
+</form>
+
 <p><a href='/vendors'>Return to the vendor list</a></p>
+
 <p><a href='/'>Return to the home page</a></p>
