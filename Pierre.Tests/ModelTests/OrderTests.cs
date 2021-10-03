@@ -95,5 +95,19 @@ namespace PierreTracker.Tests
 			string result = newOrder.ProductDescription;
 			Assert.AreEqual(updatedProductDescription, result);
 		}
+
+		[TestMethod]
+		public void SetPrice_SetPrice_Int()
+		{
+			string product = "bread";
+			string productDescription ="The bread is tasty here.";
+			int price = 1;
+			string date = "today";
+			Order newOrder = new Order(product, productDescription, price, date);
+			int updatedPrice = 5;
+			newOrder.Price = updatedPrice;
+			int result = newOrder.Price;
+			Assert.AreEqual(updatedPrice, result);
+		}
 	}
 }
