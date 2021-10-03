@@ -69,7 +69,7 @@ namespace PierreTracker.Tests
 		}
 
 		[TestMethod]
-		public void SetProdcut_SetProduct_String()
+		public void SetProduct_SetProduct_String()
 		{
 			string product = "bread";
 			string productDescription ="The bread is tasty here.";
@@ -80,6 +80,20 @@ namespace PierreTracker.Tests
 			newOrder.Product = updatedProduct;
 			string result = newOrder.Product;
 			Assert.AreEqual(updatedProduct, result);
+		}
+
+		[TestMethod]
+		public void SetProdcutDescription_SetProductDescription_String()
+		{
+			string product = "bread";
+			string productDescription ="The bread is tasty here.";
+			int price = 1;
+			string date = "today";
+			Order newOrder = new Order(product, productDescription, price, date);
+			string updatedProductDescription = "The pastries are tasty here";
+			newOrder.ProductDescription = updatedProductDescription;
+			string result = newOrder.ProductDescription;
+			Assert.AreEqual(updatedProductDescription, result);
 		}
 	}
 }
