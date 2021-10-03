@@ -1,0 +1,14 @@
+@using PierrTracker.Models;
+
+<h3>Here all all of the orders for this vendor:</h3>
+<p>@Model["vendor"].Description</p>
+<ol>
+	@foreach (Order order in @Model["orders"])
+	{
+		<li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'></a><p>$@order.Price</p></li>
+	}
+</ol>
+
+<p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+<p><a href='/vendors'>Return to the vendor list</a></p>
+<p><a href='/'>Return to the home page</a></p>
