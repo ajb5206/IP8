@@ -39,7 +39,7 @@ Welcome to the Pierre's order tracker. Fill out Vendor information and then add 
 6. Run `dotnet run` and navigate to `localhost:5000` to see the tracker in action
 
 ## Known Bugs <a id="knownbugs"></a>
-* none found at this time
+* Having a unique order system for each vendor would be an ideal future issue to address.
 
 ## License
 Copyright <2021> <MIT>
