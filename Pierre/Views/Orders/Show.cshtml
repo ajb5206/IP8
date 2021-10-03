@@ -1,10 +1,10 @@
 @using PierreTracker.Models;
 <h1>Order Details:</h1>
 
-<p>@Model["order"].Product</p>
-<p>@Model["order"].ProductDescription</p>
-<p>@Model["order"].Price</p>
-<p>@Model["order"].Date</p>
+<p>Product Name: @Model["order"].Product</p>
+<p>Description: @Model["order"].ProductDescription</p>
+<p>Price: $@Model["order"].Price</p>
+<p>Date: @Model["order"].Date</p>
 
 
 <a href='/vendors/@Model["vendor"].Id/orders/new'>Add another order</a>
