@@ -40,5 +40,20 @@ namespace PierreTracker.Tests
 			string result = newVendor.Description;
 			Assert.AreEqual(description, result);
 		}
+
+		[TestMethod]
+		public void GetAll_ReturnsAllVendorObjects_VendorList()
+		{
+			string vendorName01 = "Bob's";
+			string description01 = "Burgers";
+			string vendorName02 = "Wendy's";
+			string description02 = "French Fries";
+			Vendor newVendor1 = new Vendor(vendorName01, description01);
+			Vendor newVendor2 = new Vendor(vendorName02, description02);
+			List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2};
+			List<Vendor> result = Vendor.GetAll();
+			CollectionAssert.AreEqual(newList, result);
+
+		}
 	}
 }
