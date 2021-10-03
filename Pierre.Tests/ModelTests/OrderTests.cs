@@ -19,5 +19,17 @@ namespace PierreTracker.Tests
 			Order newOrder = new Order("test", "test", 0, "test");
 			Assert.AreEqual(typeof(Order), newOrder.GetType());
 		}
+
+		[TestMethod]
+		public void GetProduct_ReturnsProduct_String()
+		{
+			string product = "bread";
+			string productDescription ="The bread is tasty here.";
+			int price = 1;
+			string date = "today";
+			Order newOrder = new Order(product, productDescription, price, date);
+			string result = newOrder.Product;
+			Assert.AreEqual(product, result);
+		}
 	}
 }
