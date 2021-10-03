@@ -161,5 +161,22 @@ namespace PierreTracker.Tests
 			int result = newOrder.Id;
 			Assert.AreEqual(1, result);
 		}
+
+		[TestMethod]
+		public void Find_ReturnsCorrectOrder_Order()
+		{
+			string product01 = "bread";
+			string productDescription01 = "bread tasty";
+			int price01 = 1;
+			string date01 = "today";
+			string product02 = "pastries";
+			string productDescription02 = "pastries tasty";
+			int price02 = 2;
+			string date02 = "tomorrow";
+			Order newOrder1 = new Order(product01, productDescription01, price01, date01);
+			Order newOrder2 = new Order(product02, productDescription02, price02, date02);
+			Order result = Order.Find(2);
+			Assert.AreEqual(newOrder2, result);
+		}
 	}
 }
